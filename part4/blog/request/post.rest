@@ -2,8 +2,29 @@ POST http://localhost:3003/api/blogs HTTP/1.1
 Content-Type:application/json
 
 {
-    
-    "author": "Jane Doe",
-    "url": "http://test",
-    "likes": 10
+    "title": "blog",
+    "author": "Ian"
 }
+
+###
+POST http://localhost:3003/api/users HTTP/1.1
+Content-Type: application/json
+
+{
+    "username": "mluukkai",
+    "name": "Matti Luukkainen",
+    "password": "salainen"
+}
+
+###
+POST http://localhost:3003/api/login HTTP/1.1
+Content-Type: application/json
+
+{
+    "username": "test",
+    "password": "test"
+}
+
+###
+DELETE http://localhost:3003/api/blogs/64edc1fb14f8d8bdea4f7c25 HTTP/1.1
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InRlc3QiLCJpZCI6IjY0ZWRjMDg4NDNmZTA4ZDcyNzllZTViYSIsImlhdCI6MTY5MzQ1MTk3MiwiZXhwIjoxNjkzNDU1NTcyfQ.P1b_ix0Pus77DUXk4FB2a-OrdbmAe6L1rXHeleU57bc
